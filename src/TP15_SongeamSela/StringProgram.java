@@ -40,9 +40,12 @@ public class StringProgram {
                     Map.Entry<Character,Integer> map = iterator.next();
                     if (map.getKey().equals(list_string.get(i).charAt(j))){
                         list_char.replace(map.getKey(),map.getValue()+1);
+                        System.out.println("a");
                     }
-                    else
-                        list_char.put(list_string.get(i).charAt(j),1);
+                    else {
+                        list_char.put(list_string.get(i).charAt(j), 1);
+                        System.out.println("b");
+                    }
                 }
 
             }
@@ -50,6 +53,7 @@ public class StringProgram {
 
         for (Map.Entry map : list_char.entrySet()){
             sumOfChar = sumOfChar + (Integer)map.getValue();
+            System.out.println("c");
         }
 
         for (Map.Entry map : list_char.entrySet()){
